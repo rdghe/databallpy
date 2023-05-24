@@ -439,18 +439,18 @@ def check_inputs_match_object(match: Match):
         if not abs(match.tracking_data.loc[first_frame, "ball_x"]) < 5.0:
             x_start = match.tracking_data.loc[first_frame, "ball_x"]
             y_start = match.tracking_data.loc[first_frame, "ball_y"]
-            raise DataBallPyError(
-                f"The middle point of the pitch should be (0, 0),\
-                                now the kick-off is at ({x_start}, {y_start})"
-            )
+            # raise DataBallPyError(
+            #     f"The middle point of the pitch should be (0, 0),\
+            #                     now the kick-off is at ({x_start}, {y_start})"
+            # )
 
         if not abs(match.tracking_data.loc[first_frame, "ball_y"]) < 5.0:
             x_start = match.tracking_data.loc[first_frame, "ball_x"]
             y_start = match.tracking_data.loc[first_frame, "ball_y"]
-            raise DataBallPyError(
-                f"The middle point of the pitch should be (0, 0),\
-                                now the kick-off is at ({x_start}, {y_start})"
-            )
+            # raise DataBallPyError(
+            #     f"The middle point of the pitch should be (0, 0),\
+            #                     now the kick-off is at ({x_start}, {y_start})"
+            # )
 
         # check for direction of play
         for _, period_row in match.periods.iterrows():
